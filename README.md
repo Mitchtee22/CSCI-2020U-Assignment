@@ -1,3 +1,3 @@
 CSCI 2020U Assignment
 
-Please run code in Eclipse.
+Please run code in preferred environment.
