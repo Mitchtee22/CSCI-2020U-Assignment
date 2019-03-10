@@ -1,3 +1,5 @@
+//Mitchell Theriault (100661137)
+
 import java.text.DecimalFormat;
 
 import javafx.application.Application;
@@ -17,11 +19,13 @@ public class Q2 extends Application {
 		
 		GridPane pane = new GridPane();
 		
+		//creates labels
 		Label amountL = new Label("Investment Amount");
 		Label yearsL = new Label("Years");
 		Label interestL = new Label("Annual Interest Rate");
 		Label futureL = new Label("Future Value");
 		
+		//new text fields for all texts
 		TextField amount = new TextField();
 		amount.setPromptText("Amount");
 		amount.setAlignment(Pos.BASELINE_RIGHT);
@@ -44,9 +48,13 @@ public class Q2 extends Application {
 		
 		DecimalFormat f = new DecimalFormat("#.00");
 		
+		
+		//action handler for when button is clicked
 		btn.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
+				
+				//calculations for future value
 				double a = Double.parseDouble(amount.getText());
 				double t = Double.parseDouble(years.getText());
 				double i = Double.parseDouble(interest.getText());
@@ -60,6 +68,7 @@ public class Q2 extends Application {
 			}
 		});
 		
+		//add all labels and text boxes
 		pane.add(amountL, 0, 0);
 		pane.add(amount, 1, 0);
 		
@@ -74,6 +83,7 @@ public class Q2 extends Application {
 
 		pane.add(btn, 1, 4);
 		
+		//add pane to scene and show
 		Scene scene = new Scene(pane);
 		primaryStage.setTitle("Q2");
 		primaryStage.setScene(scene);
